@@ -327,6 +327,10 @@
                     <small>More simulations = more accurate but slower</small>
                 </div>
 
+                <div class="button-group">
+                    <button class="btn-reset" onclick="clearInputs()">Clear</button>
+                </div>
+
 
             </div>
 
@@ -653,6 +657,15 @@
             document.getElementById('stats').style.display = 'block';
 
             drawDistributionChart(simulationResults);
+        }
+
+        function clearInputs() {
+            document.getElementById('cycleTimes').value = '';
+            document.getElementById('totalWork').value = '50';
+            document.getElementById('simulations').value = '10000';
+            document.getElementById('results').style.display = 'none';
+            document.getElementById('stats').style.display = 'none';
+            clearError();
         }
 
         // Auto-calculate on load with default values
