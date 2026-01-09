@@ -48,7 +48,7 @@ The Monte Carlo simulation works by:
   
 - **Total Work Remaining**: The number of items/units you still need to complete.
 
-- **Monte Carlo Simulations**: The number of simulations to run. More simulations are more accurate but slower. Default 10,000 is usually sufficient.
+- **Iterations**: The number of iterations to run. More iterations are more accurate but slower. Default 10,000 is usually sufficient.
 
 ## Understanding the Results
 
