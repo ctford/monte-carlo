@@ -259,6 +259,41 @@
             opacity: 0.6;
             pointer-events: none;
         }
+
+        .tooltip-trigger {
+            position: relative;
+            cursor: help;
+            border-bottom: 1px dotted #667eea;
+        }
+
+        .tooltip-trigger:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            white-space: nowrap;
+            z-index: 1000;
+            pointer-events: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .tooltip-trigger:hover::before {
+            content: '';
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-top-color: #333;
+            z-index: 1000;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body>
@@ -275,7 +310,7 @@
                 <div class="error" id="error"></div>
 
                 <div class="input-group">
-                    <label for="cycleTimes">Historical Throughput</label>
+                    <label for="cycleTimes">Historical Throughput <span class="tooltip-trigger" data-tooltip="How many items your team completes per week">?</span></label>
                     <input type="text" id="cycleTimes" placeholder="e.g.: 5 3 8 4 6 7 5 or 5, 3, 8, 4, 6, 7, 5">
                     <small>Items per week (space or comma separated)</small>
                 </div>
