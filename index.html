@@ -411,6 +411,8 @@
             document.getElementById('error').classList.remove('show');
         }
 
+        const MAX_SIMULATIONS = 100000;
+
         function validateInputs(cycleTimes, totalWork, simulations) {
             if (cycleTimes.length === 0) {
                 throw new Error('Please enter at least one cycle time');
@@ -423,6 +425,9 @@
             }
             if (simulations < 100) {
                 throw new Error('Need at least 100 simulations');
+            }
+            if (simulations > MAX_SIMULATIONS) {
+                throw new Error(`Number of simulations cannot exceed ${MAX_SIMULATIONS.toLocaleString()}`);
             }
         }
 
