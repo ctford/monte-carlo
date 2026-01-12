@@ -1,5 +1,7 @@
 # Monte Carlo Project Completion Estimator
 
+[![Build Status](https://github.com/ctford/monte-carlo/actions/workflows/build.yml/badge.svg)](https://github.com/ctford/monte-carlo/actions)
+
 A single-page web application that uses Monte Carlo simulation to estimate project completion dates based on historical cycle time data.
 
 ## Overview
